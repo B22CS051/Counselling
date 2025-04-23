@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGuideAI - Ethical Career Counseling for Underprivileged Students</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="fw-bold">EduGuideAI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item" id="nav-assessment">
+                        <a class="nav-link" href="#" id="assessment-link">Career Assessment</a>
+                    </li>
+                    <li class="nav-item" id="nav-scholarships">
+                        <a class="nav-link" href="#" id="scholarships-link">Scholarships</a>
+                    </li>
+                    <li class="nav-item" id="nav-mentors">
+                        <a class="nav-link" href="#" id="mentors-link">Mentors</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-translate"></i> Language
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">हिंदी (Hindi)</a></li>
+                            <li><a class="dropdown-item" href="#">தமிழ் (Tamil)</a></li>
+                            <li><a class="dropdown-item" href="#">తెలుగు (Telugu)</a></li>
+                            <li><a class="dropdown-item" href="#">ಕನ್ನಡ (Kannada)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" id="login-btn">
+                        <a class="nav-link btn btn-outline-light btn-sm px-3 ms-2" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Login
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown d-none" id="user-profile">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle"></i> <span id="username-display">User</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="dashboard-link">My Dashboard</a></li>
+                            <li><a class="dropdown-item" href="#" id="profile-link">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="logout-link">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Welcome Section -->
+        <section id="welcome-section" class="container my-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-4 fw-bold text-primary">Discover Your Future Path</h1>
+                    <p class="lead">EduGuideAI is an ethical AI-powered career counseling platform designed specifically for underprivileged students.</p>
+                    <div class="features-list mt-4">
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="feature-icon bg-primary text-white">
+                                <i class="bi bi-lightbulb"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h5>Personalized Recommendations</h5>
+                                <p>Get career suggestions based on your unique skills, interests, and background.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="feature-icon bg-primary text-white">
+                                <i class="bi bi-award"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h5>Scholarship Opportunities</h5>
+                                <p>Discover scholarships and financial aid options relevant to your profile.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="feature-icon bg-primary text-white">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h5>Connect with Mentors</h5>
+                                <p>Find mentors in your field of interest to guide your career journey.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <div class="feature-icon bg-primary text-white">
+                                <i class="bi bi-wifi-off"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h5>Works Offline</h5>
+                                <p>Access career guidance even in areas with limited connectivity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Get Started <i class="bi bi-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-outline-secondary btn-lg ms-2" id="learn-more-btn">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="welcome-image">
+                        <img src="https://placehold.co/600x400/3366cc/white?text=EduGuideAI" alt="EduGuideAI" class="img-fluid rounded-3 shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ethical Approach Section -->
+        <section id="ethical-approach" class="bg-light py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold text-primary">Our Ethical Approach</h2>
+                    <p class="lead">EduGuideAI is built with ethical principles at its core</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="ethics-icon mb-3">
+                                    <i class="bi bi-shield-check text-primary"></i>
+                                </div>
+                                <h4 class="card-title">Bias Mitigation</h4>
+                                <p class="card-text">Our system is designed to provide fair recommendations regardless of socioeconomic background, gender, or region.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="ethics-icon mb-3">
+                                    <i class="bi bi-lock text-primary"></i>
+                                </div>
+                                <h4 class="card-title">Privacy Protection</h4>
+                                <p class="card-text">Student data is securely stored and anonymized to protect your personal information.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="ethics-icon mb-3">
+                                    <i class="bi bi-eye text-primary"></i>
+                                </div>
+                                <h4 class="card-title">Transparency</h4>
+                                <p class="card-text">We clearly explain how each recommendation is generated and what factors influenced it.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <div class="ethics-icon mb-3">
+                                    <i class="bi bi-person-check text-primary"></i>
+                                </div>
+                                <h4 class="card-title">Human Oversight</h4>
+                                <p class="card-text">Teachers and mentors can review AI suggestions to provide additional guidance and support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="container my-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary">How EduGuideAI Works</h2>
+                <p class="lead">Simple steps to discover your ideal career path</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="steps-container">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Take the Assessment</h4>
+                                <p>Complete a short quiz about your interests, skills, and background to help us understand your profile.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Receive Recommendations</h4>
+                                <p>Get personalized career suggestions based on your assessment results and regional opportunities.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Explore Opportunities</h4>
+                                <p>Discover scholarships, educational pathways, and skill-building resources for your chosen careers.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Connect with Mentors</h4>
+                                <p>Find and connect with experienced professionals who can guide you on your career journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Start Your Journey <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+        
+        <!-- Dynamic content will be loaded here -->
+        <div id="dynamic-content"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold">EduGuideAI</h5>
+                    <p class="mb-0">Ethical AI-Powered Career Counseling for Underprivileged Students</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p class="mb-0">Email: info@eduguideai.org<br>Phone: +91 123 456 7890</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 EduGuideAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Login to EduGuideAI</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs mb-4" id="loginTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="student-tab" data-bs-toggle="tab" data-bs-target="#student-login" type="button" role="tab">Student</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="teacher-tab" data-bs-toggle="tab" data-bs-target="#teacher-login" type="button" role="tab">Teacher/Mentor</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="loginTabsContent">
+                        <div class="tab-pane fade show active" id="student-login" role="tabpanel">
+                            <form id="student-login-form">
+                                <div class="mb-3">
+                                    <label for="student-id" class="form-label">Student ID / Roll Number</label>
+                                    <input type="text" class="form-control" id="student-id" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="student-name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="student-name" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Login</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="teacher-login" role="tabpanel">
+                            <form id="teacher-login-form">
+                                <div class="mb-3">
+                                    <label for="teacher-id" class="form-label">Teacher ID</label>
+                                    <input type="text" class="form-control" id="teacher-id" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="teacher-name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="teacher-name" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light">
+                    <p class="text-muted small mb-0">This is a prototype. No real authentication is performed.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/assessment.js"></script>
+    <script src="js/recommendations.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

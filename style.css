@@ -1,0 +1,380 @@
+/* EduGuideAI - Main Stylesheet */
+
+:root {
+    --primary: #3366cc;
+    --primary-dark: #2a55a8;
+    --secondary: #6699cc;
+    --accent: #ff9933;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--gray-800);
+}
+
+/* Navigation */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+/* Welcome Section */
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.welcome-image {
+    position: relative;
+}
+
+.welcome-image:after {
+    content: '';
+    position: absolute;
+    background-color: var(--primary);
+    width: 100%;
+    height: 100%;
+    top: 15px;
+    left: 15px;
+    border-radius: 0.3rem;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Ethical Approach Section */
+.ethics-icon {
+    font-size: 2.5rem;
+}
+
+/* How It Works Section */
+.steps-container {
+    position: relative;
+}
+
+.steps-container:before {
+    content: '';
+    position: absolute;
+    left: 41px;
+    top: 25px;
+    height: calc(100% - 50px);
+    width: 2px;
+    background-color: var(--gray-300);
+}
+
+.step-item {
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.step-content {
+    padding-top: 0.5rem;
+}
+
+/* Dashboard */
+.dashboard-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Assessment Form */
+.assessment-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-slider {
+    margin-bottom: 2rem;
+}
+
+.skill-slider .form-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-slider .form-label span {
+    font-weight: normal;
+    color: var(--gray-600);
+}
+
+/* Career Cards */
+.career-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border-left: 5px solid var(--primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.career-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.career-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.match-score {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.skill-badge {
+    display: inline-block;
+    background-color: var(--gray-200);
+    border-radius: 1rem;
+    padding: 0.25rem 0.75rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.skill-progress {
+    height: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Scholarship Cards */
+.scholarship-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border-left: 5px solid var(--accent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.scholarship-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.deadline-badge {
+    background-color: var(--warning);
+    color: var(--dark);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+/* Mentor Cards */
+.mentor-card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border-left: 5px solid var(--secondary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.mentor-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mentor-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Explanation Boxes */
+.explanation-box {
+    background-color: var(--gray-100);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--primary);
+}
+
+.ethics-note {
+    background-color: rgba(51, 102, 204, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--primary);
+    font-size: 0.9rem;
+}
+
+/* Teacher Dashboard */
+.student-table {
+    font-size: 0.9rem;
+}
+
+.student-status {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.status-completed {
+    background-color: var(--success);
+}
+
+.status-in-progress {
+    background-color: var(--warning);
+}
+
+.status-not-started {
+    background-color: var(--gray-500);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .steps-container:before {
+        left: 24px;
+    }
+    
+    .step-number {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .ethics-icon {
+        font-size: 2rem;
+    }
+    
+    .feature-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1.25rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Loader */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--gray-300);
+    border-bottom-color: var(--primary);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Charts and Visualizations */
+.chart-container {
+    height: 300px;
+    margin-bottom: 2rem;
+}
+
+/* Custom Checkboxes and Radio Buttons */
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Language Selection */
+.language-option {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.language-option:hover {
+    background-color: var(--gray-200);
+}
+
+.language-option.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+    
+    .career-card, .scholarship-card, .mentor-card {
+        break-inside: avoid;
+}
+}
